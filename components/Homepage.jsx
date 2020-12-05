@@ -9,7 +9,7 @@ export default class Homepage extends React.Component {
                     <div className="jumbo p-5 flex-1">
                         <h1 className="text-center text-5xl text-white stroke">Alejandro Mc Ewen Cock</h1>
                         <p className="text-lg text-white">
-                            I am Alejnadro Mc Ewen  a CS student at EAFIT university. This is my personal page. I love to program fun and interesting proyects. This is a sort of resume. I hope you enjoy.
+                            I am Alejnadro Mc Ewen  a CS student at EAFIT university. This is my personal page. I love to program fun and interesting proyects. I am trying my best to finish everything. This is a sort of resume. I hope you enjoy.
                         </p>
                         <p className="text-lg text-white">
                             Vestibulum eget augue vel nisi blandit ultrices eu ac elit. Ut malesuada nec diam sit amet vehicula. Pellentesque consectetur pretium libero. Vivamus tempor ullamcorper cursus. Maecenas in consequat sem. Maecenas scelerisque metus eget tortor fringilla faucibus. Donec et leo est. Nullam nulla augue, congue a lectus commodo, tempor egestas odio. Aliquam et luctus enim. Aenean lobortis tortor nisi. In blandit lectus ac euismod convallis.
