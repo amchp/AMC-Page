@@ -11,9 +11,6 @@ export default class Homepage extends React.Component {
                         <p className="text-lg text-white">
                             I am Alejnadro Mc Ewen  a CS student at EAFIT university. This is my personal page. I love to program fun and interesting proyects. I am trying my best to finish everything. This is a sort of resume. I hope you enjoy.
                         </p>
-                        <p className="text-lg text-white">
-                            Vestibulum eget augue vel nisi blandit ultrices eu ac elit. Ut malesuada nec diam sit amet vehicula. Pellentesque consectetur pretium libero. Vivamus tempor ullamcorper cursus. Maecenas in consequat sem. Maecenas scelerisque metus eget tortor fringilla faucibus. Donec et leo est. Nullam nulla augue, congue a lectus commodo, tempor egestas odio. Aliquam et luctus enim. Aenean lobortis tortor nisi. In blandit lectus ac euismod convallis.
-                        </p>
                         <Link href="/projects">
                             <button className="bg-black rounded text-white p-2 text-xl">Go to projects</button>
                         </Link>
