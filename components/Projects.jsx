@@ -12,7 +12,7 @@ export default class Projects extends React.Component {
     }
 
     pProject(){
-      this.setState({project: this.state.project - 1})
+        this.setState({project: this.state.project - 1})
     }
     nProject(){
         this.setState({project: this.state.project + 1})
