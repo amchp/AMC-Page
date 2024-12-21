@@ -30,24 +30,7 @@ export default function ProjectDetailPage() {
       <h1 className="text-4xl font-bold mb-8 text-center text-white">{project.title}</h1>
       <Card className="mb-8 bg-gray-800 border-gray-700">
         <CardContent className="p-0">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {project.images.map((image, index) => (
-                <CarouselItem key={index}>
-                  <div className="relative h-64 md:h-96">
-                    <Image 
-                      src={image} 
-                      alt={`${project.title} - Image ${index + 1}`} 
-                      layout="fill"
-                      objectFit="scale-down"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+            <ImageOrComponent {content: project.content, carousel: false }/>
       <div className="prose prose-invert max-w-none">
         <p className="text-gray-300">{project.description}</p>
       </div>

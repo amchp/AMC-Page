@@ -12,8 +12,8 @@ export default function EducationPage() {
         <CardContent>
           <div className="space-y-4">
             <div>
-              <h3 className="text-xl font-semibold text-blue-400">B. Sc: Computer Science & Engineering & Applied Mathematics</h3>
-              <p className="text-gray-400">Jun. 2020 - Nov. 2025 (Expected)</p>
+              <h3 className="text-xl font-semibold text-blue-400">B. Sc: Computer Engineering</h3>
+              <p className="text-gray-400">Jun. 2020 - Jun. 2025 (Expected)</p>
             </div>
             <div className="flex items-center space-x-2">
               <span className="text-gray-300">GPA:</span>
@@ -40,7 +40,8 @@ export default function EducationPage() {
               "Information Systems",
               "User Experience",
               "ICanStudy",
-              "Telematics"
+              "Telematics",
+              "Big Data Engineering"
             ].map((course, index) => (
               <li key={index} className="flex items-center text-gray-300">
                 <Badge variant="outline" className="mr-2 w-2 h-2 p-0 rounded-full bg-blue-400 border-none" />
@@ -57,10 +58,10 @@ export default function EducationPage() {
           My time at EAFIT University has been transformative, allowing me to delve deep into the realms of Computer Science, Engineering, and Applied Mathematics. This unique combination of disciplines has equipped me with a versatile skill set, enabling me to approach complex problems from multiple angles.
         </p>
         <p className="text-gray-300">
-          The rigorous coursework, ranging from theoretical concepts in Formal Languages & Compilers to practical applications in Software Engineering and Machine Learning, has provided me with a solid foundation in both the theoretical and practical aspects of computer science.
+          The rigorous coursework, ranging from theoretical concepts in Formal Languages & Compilers to practical applications in Software Engineering and Operating Systems, has provided me with a solid foundation in both the theoretical and practical aspects of computer science.
         </p>
         <p className="text-gray-300">
-          I'm particularly excited about the intersection of High-Performance Computing and Machine Learning, areas where I see immense potential for innovation. My education has not only given me technical skills but also fostered critical thinking and problem-solving abilities that I believe are crucial in the ever-evolving field of technology.
+          My education has not only given me technical skills but also fostered critical thinking and problem-solving abilities that I believe are crucial in the ever-evolving field of technology.
         </p>
       </div>
     </div>

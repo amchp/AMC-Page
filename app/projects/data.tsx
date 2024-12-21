@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  images: string[];
+  content: React.ReactNode | string[];
   link: string;
 }
 
@@ -21,7 +21,7 @@ export const projects: Project[] = [
       " It also highlighted the challenges of dynamic typing and the importance of understanding the data being handled."
     ),
     images: ["/Snake.png"],
-    link: "https://github.com/amchp/SnakeAI"
+    link: "https://editor.p5js.org/mcewenalejandro/sketches/WJdCPHuYd"
   },
   {
     id: '2',
