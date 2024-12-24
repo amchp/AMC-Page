@@ -96,7 +96,7 @@ export default function ExperiencePage() {
       </Tabs>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filteredExperiences.map((exp, index) => (
-            <Card className="bg-gray-800 border-gray-700 overflow-hidden rounded-xl">
+            <Card className="bg-gray-800 border-gray-700 overflow-hidden rounded-xl" key={index}>
               <Image 
                 src={exp.image} 
                 alt={exp.title} 
