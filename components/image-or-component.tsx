@@ -1,17 +1,20 @@
 'use client'
 
+import Image from "next/image";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+
 
 interface ImageOrComponentProps {
   content: React.ReactNode | string[];
   carousel: boolean;
 };
 
-export function ImageOrComponent({ content, caruosel }: ImageOrComponentProps) {
-  const isStringArray = Array.isArray(project.content);
+export function ImageOrComponent({ content, carousel }: ImageOrComponentProps) {
+  const isStringArray = Array.isArray(content);
 
   if (isStringArray) {
     const images = content as string[];
-    if (caruosel) {
+    if (carousel) {
       return (
           <Carousel className="w-full">
             <CarouselContent>
@@ -20,7 +23,7 @@ export function ImageOrComponent({ content, caruosel }: ImageOrComponentProps) {
                   <div className="relative h-64 md:h-96">
                     <Image 
                       src={image} 
-                      alt={`${project.title} - Image ${index + 1}`} 
+                      alt={`Image ${index + 1}`} 
                       layout="fill"
                       objectFit="scale-down"
                     />
@@ -38,7 +41,7 @@ export function ImageOrComponent({ content, caruosel }: ImageOrComponentProps) {
       <div>
         <Image
           src={images[0]}
-          alt={project.title}
+          alt='Image'
           width={600}
           height={400}
           className="w-full h-48 object-scale-down"
@@ -46,5 +49,5 @@ export function ImageOrComponent({ content, caruosel }: ImageOrComponentProps) {
       </div>
     );
   } 
-  return <div>{project.content}</div>;
+  return <div>{content}</div>;
 }

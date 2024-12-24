@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import { ReactNode } from 'react';
 
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -51,5 +52,4 @@ function SocialLink({ href, icon, label }: { href: string; icon: ReactNode; labe
     </Link>
   )
 }
-
 

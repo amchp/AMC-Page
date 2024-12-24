@@ -1,12 +1,12 @@
 'use client'
 
 import { useParams, useRouter } from 'next/navigation'
-import Image from 'next/image'
-import { ArrowLeft } from 'lucide-react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { ArrowLeft, Github } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { projects } from '../data'
+import { ImageOrComponent } from '@/components/image-or-component'
+import Link from 'next/link'
 
 export default function ProjectDetailPage() {
   const params = useParams()
@@ -30,10 +30,13 @@ export default function ProjectDetailPage() {
       <h1 className="text-4xl font-bold mb-8 text-center text-white">{project.title}</h1>
       <Card className="mb-8 bg-gray-800 border-gray-700">
         <CardContent className="p-0">
-            <ImageOrComponent {content: project.content, carousel: false }/>
+          <ImageOrComponent {...{ content: project.content, carousel: true }}/>
       <div className="prose prose-invert max-w-none">
         <p className="text-gray-300">{project.description}</p>
       </div>
+      <Link href={project.link}>
+        <Github size={24} />
+      </Link>
         </CardContent>
       </Card>
     </div>

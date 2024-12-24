@@ -2,11 +2,10 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Briefcase, Code, ExternalLink } from 'lucide-react'
+import { Calendar, Briefcase, Code } from 'lucide-react'
 
 interface Experience {
   id: string;
@@ -17,53 +16,69 @@ interface Experience {
   description: string;
   skills: string[];
   image: string;
-  link?: string;
 }
 
 const experiences: Experience[] = [
-  { 
-    id: 'exp1', 
-    title: 'Fitness Tracker App', 
-    company: 'Personal Project',
-    date: 'Jan 2023 - Present', 
-    type: 'personal',
-    description: 'Developed a mobile app for tracking personal fitness goals and nutrition using React Native and Firebase.',
-    skills: ['React Native', 'Firebase', 'Redux', 'UI/UX Design'],
-    image: '/placeholder.svg?height=400&width=600&text=Fitness+Tracker+App',
-    link: 'https://github.com/johndoe/fitness-tracker'
+  {
+    id: "1",
+    title: "Software Developer",
+    company: "MachEight",
+    date: "February 2022 - Present",
+    type: "work",
+    description: "Developed a CRM for a company with 2 million dollar revenue, implemented with Angular front-end and Django back-end integrated with a Postgres database. Designed and deployed a single sign-on with Okta, increasing user adoption.",
+    skills: ["Angular", "Django", "PostgreSQL", "Okta", "CRM Development"],
+    image: "/work/macheight-logo.png"
   },
-  { 
-    id: 'exp2', 
-    title: 'Full Stack Developer', 
-    company: 'TechStart Inc.',
-    date: 'Jun 2022 - Present', 
-    type: 'work',
-    description: 'Developing and maintaining scalable web applications for fintech clients using React, Node.js, and AWS.',
-    skills: ['React', 'Node.js', 'AWS', 'MongoDB', 'GraphQL'],
-    image: '/placeholder.svg?height=400&width=600&text=TechStart+Inc.'
+  {
+    id: "2",
+    title: "Database Developer",
+    company: "Unidad de Citologia y Patologia",
+    date: "June 2019 - Present",
+    type: "work",
+    description: "Automated Excel sheet exports, saving staff an hour of daily work. Developed a product order management program and a statistics gathering tool, improving business decision-making.",
+    skills: ["Python", "Automation", "Database Management", "Excel", "Business Intelligence"],
+    image: "/work/ucyp-logo.png"
   },
-  { 
-    id: 'exp3', 
-    title: 'State Management Library', 
-    company: 'Open Source Contribution',
-    date: 'Mar 2022 - May 2022', 
-    type: 'personal',
-    description: 'Created an open-source library for simplifying state management in React applications, gaining over 500 GitHub stars.',
-    skills: ['React', 'TypeScript', 'State Management', 'Open Source'],
-    image: '/placeholder.svg?height=400&width=600&text=State+Management+Library',
-    link: 'https://github.com/johndoe/react-easy-state'
+  {
+    id: "3",
+    title: "University Tutor",
+    company: "EAFIT University",
+    date: "July 2021 – Nov 2021",
+    type: "work",
+    description: "Guided students through challenging concepts in subjects including Calculus I, II & III, Physics I, Logic, Discrete Math, and Programming Fundamentals.",
+    skills: ["Teaching", "Mathematics", "Physics", "Discrete Math", "Programming"],
+    image: "/work/eafit.jpg"
   },
-  { 
-    id: 'exp4', 
-    title: 'Software Engineer', 
-    company: 'SearchTech',
-    date: 'Sep 2021 - May 2022', 
-    type: 'work',
-    description: 'Worked on improving search algorithms and user experience for a large-scale search engine.',
-    skills: ['Python', 'Machine Learning', 'Elasticsearch', 'A/B Testing'],
-    image: '/placeholder.svg?height=400&width=600&text=SearchTech'
+  {
+    id: "4",
+    title: "Competitive Programming Achievements",
+    company: "Various",
+    date: "2019 - Present",
+    type: "personal",
+    description: "Demonstrated excellence in competitive programming by achieving significant milestones. Placed second in the 2023 ICPC South America-North Finals and ranked 29th in Latin America, qualifying for the Super Region Finals from a competitive field of 6,780 students representing 495 universities across 17 countries. Additionally, secured a Top 2 position in MaratonTech 2023, a city-wide competition with over 170 participants, organized by Ruta N and ITM in Medellín, Colombia. Regularly participates in prestigious contests and maintains competitive programming practice on platforms like Codeforces and LeetCode, where I am recognized as one of the top problem solvers.",
+    skills: ["Competitive Programming", "Problem Solving", "ICPC", "Algorithms", "Teamwork"],
+    image: "/personal/competive-programing.JPG"
+  },  {
+    id: "5",
+    title: "Participated in TOM Colombia 2019",
+    company: "TOM Colombia",
+    date: "August 2019 - October 2019",
+    type: "personal",
+    description: "Designed an ATM simulator to assist individuals with learning disabilities in using ATMs. Developed the application 'Simulador Cajero Electrónico (TOM),' which has been downloaded 500 times on the Play Store.",
+    skills: ["App Development", "Inclusive Design", "Android", "UI/UX"],
+    image: "/personal/tom.JPG"
   },
-]
+  {
+    id: "6",
+    title: "Using Neovim and Tmux",
+    company: "Personal Project",
+    date: "2021 - Present",
+    type: "personal",
+    description: "Enhanced coding productivity through a custom Neovim and Tmux setup for efficient workflow management. Configuration and setup details are available in my dotfiles repository.",
+    skills: ["Neovim", "Tmux", "Productivity", "Custom Configuration"],
+    image: "/personal/nvim.svg"
+  }
+];
 
 export default function ExperiencePage() {
   const [activeTab, setActiveTab] = useState<'personal' | 'work'>('work')
@@ -87,7 +102,7 @@ export default function ExperiencePage() {
                 alt={exp.title} 
                 width={600} 
                 height={400} 
-                className="w-full h-48 object-cover rounded-t-xl"
+                className="w-full h-48 object-contain rounded-t-xl"
               />
               <CardHeader>
                 <div className="flex justify-between items-start">

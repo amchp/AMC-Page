@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Code2, EclipseIcon as Java, Cpu, Database, FileJson, GitBranch, Code, Palette, Triangle, TestTube, Github } from 'lucide-react'
+import Image from 'next/image';
 
 export default function EducationPage() {
   return (
@@ -21,6 +23,31 @@ export default function EducationPage() {
             </div>
           </div>
         </CardContent>
+      </Card>
+      <Card className="bg-gray-800 border-gray-700 mb-8">
+        <CardHeader>
+          <CardTitle className="text-xl text-white">Technical Skills</CardTitle>
+        </CardHeader>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+              <SkillIcon icon={<Java />} label="Java" />
+              <SkillIcon icon={<Cpu />} label="C++" />
+              <SkillIcon icon={<Image src="python.svg" alt="Python" width={24} height={24} />} label="Python" />
+              <SkillIcon icon={<Database />} label="SQL" />
+              <SkillIcon icon={<Image src="javascript.svg" alt="Javascript" width={24} height={24} />} label="JavaScript" />
+              <SkillIcon icon={<FileJson />} label="R" />
+              <SkillIcon icon={<GitBranch />} label="Git" />
+              <SkillIcon icon={<Github />} label="GitHub" />
+              <SkillIcon icon={<Code />} label="nvim" />
+              <SkillIcon icon={<Palette />} label="P5.js" />
+              <SkillIcon icon={<Palette />} label="Processing" />
+              <SkillIcon icon={<Image src="react.svg" alt="React" width={24} height={24} />} label="React" />
+              <SkillIcon icon={<Triangle />} label="Angular" />
+              <SkillIcon icon={<Code2 />} label="Node.js" />
+              <SkillIcon icon={<Image src="django.svg" alt="React" width={24} height={24} />} label="Django" />
+              <SkillIcon icon={<TestTube />} label="Jasmine" />
+              <SkillIcon icon={<TestTube />} label="Pytest" />
+              <SkillIcon icon={<Image src="cypress.svg" alt="React" width={24} height={24} />} label="Cypress" />
+            </div>
       </Card>
 
       <Card className="bg-gray-800 border-gray-700">
@@ -64,6 +91,17 @@ export default function EducationPage() {
           My education has not only given me technical skills but also fostered critical thinking and problem-solving abilities that I believe are crucial in the ever-evolving field of technology.
         </p>
       </div>
+    </div>
+  )
+}
+
+function SkillIcon({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <div className="flex flex-col items-center space-y-2 group">
+      <div className="p-3 bg-gray-800 rounded-full transition-all duration-300 ease-in-out group-hover:bg-blue-600 group-hover:scale-110">
+        {icon}
+      </div>
+      <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">{label}</span>
     </div>
   )
 }
