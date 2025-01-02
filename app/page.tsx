@@ -24,10 +24,10 @@ export default function Home() {
           </p>
           <div className="flex justify-center space-x-6">
             <SocialLink href="mcewenalejandro@gmail.com" icon={<Mail size={24} />} label="Mail" />
-            <SocialLink href="https://www.linkedin.com/in/johndoe" icon={<Linkedin size={24} />} label="LinkedIn" />
-            <SocialLink href="https://github.com/johndoe" icon={<Github size={24} />} label="GitHub" />
+            <SocialLink href="https://www.linkedin.com/in/alejandro-mc-ewen-21b825227/" icon={<Linkedin size={24} />} label="LinkedIn" />
+            <SocialLink href="https://github.com/amchp" icon={<Github size={24} />} label="GitHub" />
             <SocialLink 
-              href="https://codeforces.com/profile/johndoe"
+              href="https://codeforces.com/profile/automac"
               icon={<Image src="/code-forces.svg" alt="Codeforces" width={24} height={24} />} 
               label="Codeforces" 
             />
